@@ -38,6 +38,7 @@
     .replace(/\s+/g, ' ')
     .trim();
   const filename = `${safeName}.csv`;
+  console.log(`导出文件名: ${filename}`);
 
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
