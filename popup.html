@@ -1,0 +1,21 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body { font-family: "Segoe UI", Arial, sans-serif; margin: 0; padding: 12px; width: 220px; background: #f7f7f7; color: #222; }
+      h1 { font-size: 14px; margin: 0 0 8px 0; }
+      button { padding: 8px 10px; border: none; border-radius: 4px; background: #1a73e8; color: #fff; font-size: 12px; cursor: pointer; width: 100%; }
+      button:disabled { background: #9bbcf0; cursor: default; }
+      #status { font-size: 12px; margin-top: 8px; min-height: 14px; }
+    </style>
+    <title>Viator 自动化</title>
+  </head>
+  <body>
+    <h1>Viator 自动化</h1>
+    <button id="runBtn">开始提取并导出</button>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+#viator-tools-panel {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 2147483647;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 140px;
+  padding: 10px 12px;
+  background: rgba(22, 22, 22, 0.9);
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+#viator-tools-panel .vtp-title {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+#viator-tools-panel .vtp-btn {
+  appearance: none;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffb300;
+  color: #1b1b1b;
+  transition: transform 0.08s ease, filter 0.2s ease;
+}
+
+#viator-tools-panel .vtp-btn-secondary {
+  background: #2f88ff;
+  color: #ffffff;
+}
+
+#viator-tools-panel .vtp-btn:hover {
+  filter: brightness(1.05);
+}
+
+#viator-tools-panel .vtp-btn:active {
+  transform: translateY(1px) scale(0.99);
+}
+
+#viator-tools-panel .vtp-status {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+#viator-tools-panel .vtp-status-error {
+  color: #ff6b6b;
+  opacity: 1;
+}

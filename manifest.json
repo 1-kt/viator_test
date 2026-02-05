@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Viator Merged Extractor",
+  "version": "1.0.0",
+  "description": "Merged panel + auto extract/export for viator.com.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://www.viator.com/*", "https://*.viator.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Viator Auto",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.viator.com/*", "https://*.viator.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
