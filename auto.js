@@ -16,7 +16,7 @@
       while (true) {
         if (pageIndex > 1) {
           setStatus(`等待页面加载（第 ${pageIndex} 页）...`);
-          await sleep(5000);
+          await sleep(500);
         }
 
         const extractBtn = document.getElementById('vtp-extract-btn');

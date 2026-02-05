@@ -30,7 +30,14 @@
 
   const csvContent = '\ufeff' + header + '\n' + rows;
   const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-  const filename = `products_${new Date().toISOString().slice(0, 19).replace(/[:T]/g, '-')}.csv`;
+
+  const termEl = document.querySelector('.searchTerm__VriX.amp-mask');
+  const rawName = termEl ? termEl.textContent.trim() : '';
+  const safeName = (rawName)
+    .replace(/[\\/:*?"<>|]/g, '_')
+    .replace(/\s+/g, ' ')
+    .trim();
+  const filename = `${safeName}.csv`;
 
   const link = document.createElement('a');
   link.href = URL.createObjectURL(blob);
